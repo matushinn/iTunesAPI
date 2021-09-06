@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,10 @@
 		379E2FF426E64F8700ADF688 /* iTunesAPIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379E2FF326E64F8700ADF688 /* iTunesAPIUITests.swift */; };
 		379E300226E6505E00ADF688 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379E300126E6505E00ADF688 /* SearchViewController.swift */; };
 		379E300426E6512100ADF688 /* iTunesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379E300326E6512100ADF688 /* iTunesAPI.swift */; };
+		379E300626E6540C00ADF688 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379E300526E6540C00ADF688 /* Song.swift */; };
+		379E300C26E657CE00ADF688 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379E300A26E657CE00ADF688 /* ListTableViewCell.swift */; };
+		379E300D26E657CE00ADF688 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 379E300B26E657CE00ADF688 /* ListTableViewCell.xib */; };
+		379E301126E65D5200ADF688 /* ErrorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379E301026E65D5200ADF688 /* ErrorAlert.swift */; };
 		A52DB0A04F98997050598CCA /* Pods_iTunesAPITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FF540E2B3A5BD97D9893EA5 /* Pods_iTunesAPITests.framework */; };
 		B66A4C2E56680BF1E914D07F /* Pods_iTunesAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BB616CFE36EC0970F407EE2 /* Pods_iTunesAPI.framework */; };
 /* End PBXBuildFile section */
@@ -55,6 +59,10 @@
 		379E2FF526E64F8700ADF688 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		379E300126E6505E00ADF688 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		379E300326E6512100ADF688 /* iTunesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesAPI.swift; sourceTree = "<group>"; };
+		379E300526E6540C00ADF688 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		379E300A26E657CE00ADF688 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		379E300B26E657CE00ADF688 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
+		379E301026E65D5200ADF688 /* ErrorAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlert.swift; sourceTree = "<group>"; };
 		3FF540E2B3A5BD97D9893EA5 /* Pods_iTunesAPITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTunesAPITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		62EEAB6EACB6185F9C4854AC /* Pods-iTunesAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesAPI.release.xcconfig"; path = "Target Support Files/Pods-iTunesAPI/Pods-iTunesAPI.release.xcconfig"; sourceTree = "<group>"; };
 		8BB616CFE36EC0970F407EE2 /* Pods_iTunesAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTunesAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,14 +126,15 @@
 		379E2FD026E64F8200ADF688 /* iTunesAPI */ = {
 			isa = PBXGroup;
 			children = (
+				379E300F26E65A5B00ADF688 /* Controllers */,
+				379E300E26E65A5000ADF688 /* Model */,
+				379E300726E6577A00ADF688 /* Cell */,
 				379E2FD126E64F8200ADF688 /* AppDelegate.swift */,
 				379E2FD326E64F8200ADF688 /* SceneDelegate.swift */,
 				379E2FD726E64F8200ADF688 /* Main.storyboard */,
 				379E2FDA26E64F8700ADF688 /* Assets.xcassets */,
 				379E2FDC26E64F8700ADF688 /* LaunchScreen.storyboard */,
 				379E2FDF26E64F8700ADF688 /* Info.plist */,
-				379E300126E6505E00ADF688 /* SearchViewController.swift */,
-				379E300326E6512100ADF688 /* iTunesAPI.swift */,
 			);
 			path = iTunesAPI;
 			sourceTree = "<group>";
@@ -148,6 +157,33 @@
 			path = iTunesAPIUITests;
 			sourceTree = "<group>";
 		};
+		379E300726E6577A00ADF688 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				379E300A26E657CE00ADF688 /* ListTableViewCell.swift */,
+				379E300B26E657CE00ADF688 /* ListTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		379E300E26E65A5000ADF688 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				379E300526E6540C00ADF688 /* Song.swift */,
+				379E300326E6512100ADF688 /* iTunesAPI.swift */,
+				379E301026E65D5200ADF688 /* ErrorAlert.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		379E300F26E65A5B00ADF688 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				379E300126E6505E00ADF688 /* SearchViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		BD34929AF8A954308237DCC5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,7 +194,6 @@
 				8EE7F2C176F8461348A8DD99 /* Pods-iTunesAPITests.debug.xcconfig */,
 				E331861F0E92C6171B971695 /* Pods-iTunesAPITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -281,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				379E2FDE26E64F8700ADF688 /* LaunchScreen.storyboard in Resources */,
+				379E300D26E657CE00ADF688 /* ListTableViewCell.xib in Resources */,
 				379E2FDB26E64F8700ADF688 /* Assets.xcassets in Resources */,
 				379E2FD926E64F8200ADF688 /* Main.storyboard in Resources */,
 			);
@@ -414,6 +450,9 @@
 				379E300226E6505E00ADF688 /* SearchViewController.swift in Sources */,
 				379E2FD226E64F8200ADF688 /* AppDelegate.swift in Sources */,
 				379E2FD426E64F8200ADF688 /* SceneDelegate.swift in Sources */,
+				379E300626E6540C00ADF688 /* Song.swift in Sources */,
+				379E300C26E657CE00ADF688 /* ListTableViewCell.swift in Sources */,
+				379E301126E65D5200ADF688 /* ErrorAlert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
